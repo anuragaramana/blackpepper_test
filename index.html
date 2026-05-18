@@ -18,6 +18,36 @@
   --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'DM Sans',sans-serif;
 }
+
+.marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      background: white;
+      padding: 20px 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .marquee-content {
+      display: inline-block;
+      animation: scroll 12s linear infinite;
+    }
+
+    .logo {
+      width: 120px;
+      height: 60px;
+      margin: 0 30px;
+      object-fit: contain;
+      vertical-align: middle;
+    }
+     @keyframes scroll {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;font-size:16px}
 body{background:var(--ink);color:var(--bone);font-family:var(--sans);font-weight:300;overflow-x:hidden;cursor:none}
@@ -323,6 +353,15 @@ nav.scrolled .nav-logo-img{opacity:1}
 <!-- WHO WE WORK WITH -->
 <section id="clients">
   <div class="section-label reveal">Who We Work With</div>
+   <div class="marquee">
+    <div class="marquee-content">
+      <img class="logo" src="https://via.placeholder.com/120x60?text=Logo+1" alt="Logo 1">
+      <img class="logo" src="https://via.placeholder.com/120x60?text=Logo+2" alt="Logo 2">
+      <img class="logo" src="https://via.placeholder.com/120x60?text=Logo+3" alt="Logo 3">
+      <img class="logo" src="https://via.placeholder.com/120x60?text=Logo+4" alt="Logo 4">
+      <img class="logo" src="https://via.placeholder.com/120x60?text=Logo+5" alt="Logo 5">
+    </div>
+  </div>
   <h2 class="clients-title reveal">Brands &amp; Leaders<br>Who <em>Refuse to</em><br>Stay Invisible</h2>
   <div class="clients-grid">
     <div class="client-type reveal">
